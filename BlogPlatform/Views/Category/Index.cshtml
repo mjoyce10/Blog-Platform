@@ -1,2 +1,21 @@
-﻿
+﻿@model IEnumerable<blog_template_practice.Models.Category>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+    <title>Category Index</title>
+</head>
+<body>
+    <h1>Category Index</h1>
+    @foreach (var category in Model)
+    {
+        <a href="/Category/Details/@category.Id">@category.Name</a>
+    }
+</body>
+</html>
 
