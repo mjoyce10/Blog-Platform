@@ -11,6 +11,11 @@ namespace blog_template_practice.Models
         public int Id { get; set; }
         public virtual ICollection<Content> Contents { get; set; }
 
+        public Category()
+        {
+
+        }
+
         public Category(int id, string name)
         {
             Id = id;
