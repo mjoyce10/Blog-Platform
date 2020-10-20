@@ -1,22 +1,24 @@
-﻿@model IEnumerable<blog_template_practice.Models.Content>
+﻿@model blog_template_practice.Models.Category
 @{
     Layout = null;
 }
 
 <!DOCTYPE html>
+
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
     <meta charset="utf-8" />
-    <title>Content Index</title>
+    <title>Category Details</title>
 </head>
 <body>
-    <h1>Content Index</h1>
-    @foreach (var content in Model)
+    <h1>@Model.Name</h1>
+    @foreach (var content in Model.Contents)
     {
         <a href="/Content/Details/@content.Id">@content.Title</a>
         <p>@content.Author</p>
         <p>@content.PublishDate</p>
     }
+    <a href="/Category/Index">Return to Category Index</a>
 </body>
 </html>

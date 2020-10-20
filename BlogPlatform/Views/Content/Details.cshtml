@@ -1,0 +1,24 @@
+﻿@model blog_template_practice.Models.Content
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+    <title>Content Details</title>
+</head>
+<body>
+    <h1>@Model.Title</h1>
+    <p>@Model.Author</p>
+    <p>@Model.PublishDate</p>
+    <p>@Model.Body</p>
+
+    <a href="/Category/Index">Return to Category Index</a>
+    <br />
+    <a href="/Category/Details/@Model.CategoryId">Return to Category Details</a>
+</body>
+</html>
