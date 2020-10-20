@@ -15,7 +15,11 @@ namespace blog_template_practice.Models
         public int CategoryId { get; set; }
         public Category Category { get; set; }
 
-        public Content (int id, string title, string body, string author, string publishDate)
+        public Content()
+        {
+
+        }
+        public Content(int id, string title, string body, string author, string publishDate)
         {
             Id = id;
             Title = title;
