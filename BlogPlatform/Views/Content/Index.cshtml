@@ -12,6 +12,9 @@
 </head>
 <body>
     <h1>Content Index</h1>
+    <br />
+    <a href="/Content/Create">Create a blog post</a>
+
     @foreach (var content in Model)
     {
         <a href="/Content/Details/@content.Id">@content.Title</a>

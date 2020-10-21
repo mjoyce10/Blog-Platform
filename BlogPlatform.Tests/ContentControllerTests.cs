@@ -62,9 +62,9 @@ namespace blog_template_practice.Tests
         [Fact]
         public void Create_Returns_a_ViewResult()
         {
-            //var result = sut.Create();
+            var result = sut.Create();
 
-            //Assert.IsType<ViewResult>(result);
+            Assert.IsType<ViewResult>(result);
         }
 
         [Fact]
@@ -78,9 +78,9 @@ namespace blog_template_practice.Tests
         [Fact]
         public void Create_Post_Returns_ActionResult()
         {
-            //var result = sut.Create(new Content());
+            var result = sut.Create(new Content());
 
-            //Assert.IsAssignableFrom<ActionResult>(result);
+            Assert.IsAssignableFrom<ActionResult>(result);
         }
 
         [Fact]
