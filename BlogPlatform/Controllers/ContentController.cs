@@ -28,5 +28,23 @@ namespace blog_template_practice.Controllers
             var model = contentRepo.GetById(id);
             return View(model);
         }
+
+        [HttpGet]
+        public ViewResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(Content content)
+        {
+            content.PublishDate = DateTime.Now.ToString("MM/dd/yyyy");
+            if (ModelState.IsValid)
+            {
+                contentRepo.Create(content);
+                return RedirectToAction("Index");
+            }
+            return View(content);
+        }
     }
 }
