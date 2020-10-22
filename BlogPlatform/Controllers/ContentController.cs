@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using blog_template_practice.Models;
 using blog_template_practice.Repositories;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Win32;
 
 namespace blog_template_practice.Controllers
 {
@@ -46,5 +47,25 @@ namespace blog_template_practice.Controllers
             }
             return View(content);
         }
+
+        [HttpGet]
+        public ViewResult Update(int id)
+        {
+            Content model = contentRepo.GetById(id);
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Update(Content content)
+        {
+            if (ModelState.IsValid)
+            {
+                contentRepo.Update(content);
+                return RedirectToAction("Details", "Content", new { id = content.Id });
+            }
+            return View();
+        }
+
+
     }
 }
