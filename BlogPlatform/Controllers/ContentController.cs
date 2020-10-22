@@ -36,6 +36,13 @@ namespace blog_template_practice.Controllers
             return View();
         }
 
+        [HttpGet]
+        public ViewResult CreateByCategoryId(int id)
+        {
+            ViewBag.CategoryId = id;
+            return View();
+        }
+
         [HttpPost]
         public ActionResult Create(Content content)
         {

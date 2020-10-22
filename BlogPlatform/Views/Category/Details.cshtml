@@ -19,7 +19,9 @@
         <p>@content.Author</p>
         <p>@content.PublishDate</p>
     }
-    <a href="/Content/Create">Create a blog post</a>
-    <a href="/Category/Index">Return to Category Index</a>
+    
+    <p><a href="/Content/CreateByCategoryId/@Model.Id">Add a post in @Model.Name</a></p>
+    <p><a href="/Content/Create">Create a blog post</a></p>
+    <p><a href="/Category/Index">Return to Category Index</a></p>
 </body>
 </html>
