@@ -14,7 +14,7 @@
     <h1>Category Index</h1>
     @foreach (var category in Model)
     {
-        <a href="/Category/Details/@category.Id">@category.Name</a>
+        <p><a href="/Category/Details/@category.Id">@category.Name</a></p>
     }
     <a href="/Content/Create">Create a blog post</a>
 </body>

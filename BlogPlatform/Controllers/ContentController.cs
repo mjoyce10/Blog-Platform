@@ -47,6 +47,7 @@ namespace blog_template_practice.Controllers
         public ActionResult Create(Content content)
         {
             content.PublishDate = DateTime.Now.ToString("MM/dd/yyyy");
+
             if (ModelState.IsValid)
             {
                 contentRepo.Create(content);
@@ -65,6 +66,8 @@ namespace blog_template_practice.Controllers
         [HttpPost]
         public ActionResult Update(Content content)
         {
+            content.PublishDate = DateTime.Now.ToString("MM/dd/yyyy");
+
             if (ModelState.IsValid)
             {
                 contentRepo.Update(content);
@@ -73,6 +76,18 @@ namespace blog_template_practice.Controllers
             return View();
         }
 
+        [HttpGet]
+        public ViewResult Delete(int id)
+        {
+            Content model = contentRepo.GetById(id);
+            return View(model);
+        }
 
+        [HttpPost]
+        public ActionResult Delete(Content content)
+        {
+            contentRepo.Delete(content);
+            return RedirectToAction("Index");
+        }
     }
 }
