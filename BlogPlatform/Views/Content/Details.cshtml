@@ -17,10 +17,12 @@
     <p>@Model.PublishDate</p>
     <p>@Model.Body</p>
 
-    <a href="/Content/Create">Create a blog post</a>
-    <br />
-    <a href="/Category/Index">Return to Category Index</a>
-    <br />
-    <a href="/Category/Details/@Model.CategoryId">Return to Category Details</a>
+    <p><a href="/Content/Update/@Model.Id">Edit post</a></p>
+    
+    <p><a href="/Content/Create">Create a blog post</a></p>
+
+    <p><a href="/Category/Index">Return to Category Index</a></p>
+
+    <p><a href="/Category/Details/@Model.CategoryId">Return to Category Details</a></p>
 </body>
 </html>

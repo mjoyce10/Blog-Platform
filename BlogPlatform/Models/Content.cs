@@ -9,7 +9,7 @@ namespace blog_template_practice.Models
     public class Content
     {
         public int Id { get; set; }
-        [MaxLength(25)]
+        [MaxLength(50)]
         public string Title { get; set; }
         public string Body { get; set; }
         [Required]
