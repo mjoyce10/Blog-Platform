@@ -9,6 +9,7 @@ namespace blog_template_practice.Models
     {
         public string Name { get; set; }
         public int Id { get; set; }
+        public string Image { get; set; }
         public virtual ICollection<Content> Contents { get; set; }
 
         public Category()

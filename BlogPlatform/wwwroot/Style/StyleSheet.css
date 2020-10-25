@@ -1,34 +1,31 @@
-﻿* {
-    box-sizing: border-box;
-}
-
+﻿
 body {
     font-family: 'Titillium Web', sans-serif;
+    margin: 0;
+    background-color: #879b87;
 }
 
 h1, h2 {
     font-family: 'Teko', sans-serif;
+    background-color: #2f3d1e;
+    color: #879b87;
 }
 
 h1 {
     font-size: 5.61rem;
     margin: 0;
+    text-align: center;
+    padding-top: 1rem;
+    line-height: 1;
 }
 
 h2 {
-    font-size: 3.157rem;
-    text-align: center;
-}
-
-.under-header {
-    background-image: url(/Images/DGBanner2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 650px;
+    font-size: 4.209rem;
+    margin: 2.5rem 0;
 }
 
 nav {
-    background-color: #c7d54e;
+    background-color: #2f3d1e;
     display: flex;
     justify-content: space-evenly;
     font-size: 1.77rem;
@@ -37,15 +34,173 @@ nav {
 
     nav a {
         text-decoration: none;
-        color: #2f3d1e;
-        border-bottom: .05rem solid;
+        color: #879b87;
+        border-bottom: .15rem solid transparent;
     }
 
         nav a:hover {
-            color: #648cac;
+            border-bottom: .15rem solid;
         }
+
+/*HomePage*/
+.banner-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+}
+
+    .banner-div img {
+        height: auto;
+        border: .5rem solid #2f3d1e;
+        border-radius: .5rem;
+    }
+
+    .banner-div p {
+        color: #2f3d1e;
+        background-color: #afcfd8;
+        padding: 1rem;
+        border: .5rem solid #2f3d1e;
+        border-radius: .5rem;
+        margin-left: 3rem;
+        font-size: 1.777rem;
+    }
+
+.categories {
+    padding: 3rem;
+}
+
+    .categories h2 {
+        padding: .5rem 0;
+        text-align: center;
+    }
 
 .category-links {
     display: flex;
-    background-color: pink;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 5rem 0;
 }
+
+.category-link {
+
+}
+    .category-link a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        background-color: #a3c9d1;
+        padding: 2rem;
+        border: solid .5rem #a5ae35;
+        border-radius: .5rem;
+    }
+
+        .category-link a:hover {
+            background-color: #a5ae35;
+            border: solid .5rem #a3c9d1;
+        }
+
+    .category-link img {
+        height: auto;
+        width: 22rem;
+        max-width: 100%;
+    }
+
+    .category-link p {
+        font-size: 1.777rem;
+        margin-bottom: 0;
+        color: #2f3d1e;
+    }
+
+footer {
+    text-align: center;
+    background-color: #2f3d1e;
+}
+
+    footer p {
+        margin: 0;
+        padding: 2rem 0;
+        font-size: 1.333rem;
+        color: #879b87;
+    }
+
+/*Create Page*/
+.create-heading {
+    padding-left: 1rem;
+}
+
+form {
+    padding: 2rem;
+    border-top: .5rem solid #2f3d1e;
+    border-bottom: .5rem solid #2f3d1e;
+}
+
+    form input {
+        padding: .1rem;
+        font-family: 'Titillium Web', sans-serif;
+    }
+
+    form select {
+        padding: .1rem;
+        font-family: 'Titillium Web', sans-serif;
+    }
+
+textarea {
+    padding: .5rem;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.labels-and-inputs {
+    display: grid;
+    grid-template-columns: .05fr 1fr;
+    margin: auto;
+}
+
+.labels-inputs-grid {
+    display: grid;
+    grid-template-rows: 3rem 3rem 3rem 1fr;
+}
+        
+        .labels-inputs-grid div {
+            margin: 1rem 0;
+        }
+
+.labels {
+    text-align: right;
+    padding-right: 1.5rem;
+}
+
+.body-input {
+    height: 20rem;
+    width: 50rem;
+}
+
+.title-input, .author-input {
+    width: 20rem;
+}
+
+.btn {
+    background-color: #2f3d1e;
+    color: #879b87;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+
+.return-link-div {
+    text-align: center;
+    padding-top: 1rem;
+
+}
+    .return-link-div a {
+        text-decoration: none;
+        color: #2f3d1e;
+        font-size: 1.333rem;
+    }
+
+        .return-link-div a:hover {
+            border-bottom: .05rem solid;
+        }   

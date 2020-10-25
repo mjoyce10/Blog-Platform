@@ -17,21 +17,31 @@
         <h1>Disc Golf Blog</h1>
     </header>
     <nav>
-        @foreach (var category in Model)
-        {
-            <a href="/Category/Details/@category.Id">@category.Name</a>
-        }
+        <a href="#categories">Categories</a>
+        <a href="/Content/Create">Create a Post</a>
+        <a href="/Content/Index">All Posts</a>
     </nav>
-    <div class="under-header">
+    <div class="banner-div">
+        <img src="/Images/DGBanner2.jpg" alt="Disc Golf Basket" />
+        <p>Welcome to my blog. Disc Golf is my favorite sport. </p>
     </div>
-    <h2>Category Index</h2>
-    <div class="category-links">
-        @foreach (var category in Model)
-        {
-            <p><a href="/Category/Details/@category.Id">@category.Name</a></p>
-        }
-    <p><a href="/Content/Create">Create a blog post</a></p>
+    <div id="categories" class="categories">
+        <h2>Category Index</h2>
+        <div class="category-links">
+            @foreach (var category in Model)
+            {
+                <div class="category-link">
+                    <a href="/Category/Details/@category.Id">
+                        <img src="/Images/@category.Image" />
+                        <p>@category.Name</p>
+                    </a>
+                </div>
+            }
+        </div>
     </div>
+    <footer>
+        <p>&copy; Maureen Joyce 2020</p>
+    </footer>
 </body>
 </html>
 

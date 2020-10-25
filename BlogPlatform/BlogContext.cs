@@ -28,19 +28,22 @@ namespace blog_template_practice
                 new Category
                 {
                     Id = 1,
-                    Name = "Event Discussion"
+                    Name = "Event Discussion",
+                    Image = "DGEvent.jpg"
                 },
 
                 new Category
                 {
                     Id = 2,
-                    Name = "What's in Your Bag?"
+                    Name = "What's in Your Bag?",
+                    Image = "DGBag.jpg"
                 },
 
                 new Category
                 {
                     Id = 3,
-                    Name = "Tips & Tricks"
+                    Name = "Tips & Tricks",
+                    Image = "DGTips.jpg"
                 }
                 ); ; ;
 
