@@ -8,15 +8,30 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <meta charset="utf-8" />
+    <link href="~/Style/StyleSheet.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Teko&family=Titillium+Web&display=swap" rel="stylesheet">
     <title>Category Index</title>
 </head>
 <body>
-    <h1>Category Index</h1>
-    @foreach (var category in Model)
-    {
-        <p><a href="/Category/Details/@category.Id">@category.Name</a></p>
-    }
-    <a href="/Content/Create">Create a blog post</a>
+    <header class="home-header">
+        <h1>Disc Golf Blog</h1>
+    </header>
+    <nav>
+        @foreach (var category in Model)
+        {
+            <a href="/Category/Details/@category.Id">@category.Name</a>
+        }
+    </nav>
+    <div class="under-header">
+    </div>
+    <h2>Category Index</h2>
+    <div class="category-links">
+        @foreach (var category in Model)
+        {
+            <p><a href="/Category/Details/@category.Id">@category.Name</a></p>
+        }
+    <p><a href="/Content/Create">Create a blog post</a></p>
+    </div>
 </body>
 </html>
 

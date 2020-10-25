@@ -1,0 +1,51 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2 {
+    font-family: 'Teko', sans-serif;
+}
+
+h1 {
+    font-size: 5.61rem;
+    margin: 0;
+}
+
+h2 {
+    font-size: 3.157rem;
+    text-align: center;
+}
+
+.under-header {
+    background-image: url(/Images/DGBanner2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 650px;
+}
+
+nav {
+    background-color: #c7d54e;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.77rem;
+    padding: 1rem 0;
+}
+
+    nav a {
+        text-decoration: none;
+        color: #2f3d1e;
+        border-bottom: .05rem solid;
+    }
+
+        nav a:hover {
+            color: #648cac;
+        }
+
+.category-links {
+    display: flex;
+    background-color: pink;
+}
