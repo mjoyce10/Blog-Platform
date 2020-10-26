@@ -1,7 +1,48 @@
-﻿
+﻿@model IEnumerable<blog_template_practice.Models.Category>
 @{
-    Layout = null; 
+    Layout = null;
 }
 
-<h1>Index</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+    <link href="~/Style/StyleSheet.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Teko&family=Titillium+Web&display=swap" rel="stylesheet">
+    <title>Category Index</title>
+</head>
+<body>
+    <header>
+        <h1>Category Index</h1>
+    </header>
+    <nav>
+        <div class="nav-link">
+            <a href=/Home/Index>Home</a>
+        </div>
+        <div class="nav-link">
+            <a href="/Content/Create">Create a Post</a>
+        </div>
+        <div class="nav-link">
+            <a href="/Content/Index">All Posts</a>
+        </div>
+    </nav>
+    <div id="categories" class="categories">
+        <div class="category-links">
+            @foreach (var category in Model)
+            {
+                <div class="category-link">
+                    <a href="/Category/Details/@category.Id">
+                        <img src="/Images/@category.Image" />
+                        <p>@category.Name</p>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+    <footer>
+        <p>&copy; Maureen Joyce 2020</p>
+    </footer>
+</body>
+</html>
 

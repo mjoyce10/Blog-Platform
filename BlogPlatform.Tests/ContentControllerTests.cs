@@ -24,117 +24,117 @@ namespace blog_template_practice.Tests
         [Fact]
         public void Index_Returns_A_ViewResult()
         {
-            //var result = sut.Index();
+            var result = sut.Index();
 
-            //Assert.IsType<ViewResult>(result);
+            Assert.IsType<ViewResult>(result);
         }
 
         [Fact]
         public void Index_Passes_All_Contents_To_View()
         {
-            //var expectedContents = new List<Content>();
-            //contentRepo.GetAll().Returns(expectedContents);
+            var expectedContents = new List<Content>();
+            contentRepo.GetAll().Returns(expectedContents);
 
-            //var result = sut.Index();
+            var result = sut.Index();
 
-            //Assert.Equal(expectedContents, result.Model);
+            Assert.Equal(expectedContents, result.Model);
         }
 
         [Fact]
         public void Details_Returns_A_ViewResult()
         {
-            //var result = sut.Details(1);
+            var result = sut.Details(1);
 
-            //Assert.IsType<ViewResult>(result);
+            Assert.IsType<ViewResult>(result);
         }
 
         [Fact]
         public void Details_Passes_Content_To_View()
         {
-            //var expectedContent = new Content();
-            //contentRepo.GetById(1).Returns(expectedContent);
+            var expectedContent = new Content();
+            contentRepo.GetById(1).Returns(expectedContent);
 
-            //var result = sut.Details(1);
+            var result = sut.Details(1);
 
-            //Assert.Equal(expectedContent, result.Model);
+            Assert.Equal(expectedContent, result.Model);
         }
 
         [Fact]
         public void Create_Returns_a_ViewResult()
         {
-            //var result = sut.Create();
+            var result = sut.Create();
 
-            //Assert.IsType<ViewResult>(result);
+            Assert.IsType<ViewResult>(result);
         }
 
         [Fact]
         public void CreateByCategoryId_Returns_A_ViewResult()
         {
-            //var result = sut.CreateByCategoryId(1);
+            var result = sut.CreateByCategoryId(1);
 
-            //Assert.IsType<ViewResult>(result);
+            Assert.IsType<ViewResult>(result);
         }
 
         [Fact]
         public void Create_Post_Returns_ActionResult()
         {
-            //var result = sut.Create(new Content());
+            var result = sut.Create(new Content());
 
-            //Assert.IsAssignableFrom<ActionResult>(result);
+            Assert.IsAssignableFrom<ActionResult>(result);
         }
 
         [Fact]
         public void Update_Returns_ViewResult()
         {
-            //var result = sut.Update(1);
+            var result = sut.Update(1);
 
-            //Assert.IsType<ViewResult>(result);
+            Assert.IsType<ViewResult>(result);
         }
 
         [Fact]
         public void Update_Passes_Content_To_View()
         {
-            //var expectedContent = new Content();
-            //contentRepo.GetById(1).Returns(expectedContent);
+            var expectedContent = new Content();
+            contentRepo.GetById(1).Returns(expectedContent);
 
-            //var result = sut.Update(1);
+            var result = sut.Update(1);
 
-            //Assert.Equal(expectedContent, result.Model);
+            Assert.Equal(expectedContent, result.Model);
         }
 
         [Fact]
         public void Update_Post_Returns_ActionResult()
         {
-            //var result = sut.Update(new Content());
+            var result = sut.Update(new Content());
 
-            //Assert.IsAssignableFrom<ActionResult>(result);
+            Assert.IsAssignableFrom<ActionResult>(result);
         }
 
         [Fact]
         public void Delete_Returns_ViewResult()
         {
-            //var result = sut.Delete(1);
+            var result = sut.Delete(1);
 
-            //Assert.IsType<ViewResult>(result);
+            Assert.IsType<ViewResult>(result);
         }
 
         [Fact]
         public void Delete_Passes_Content_To_View()
         {
-            //var expectedContent = new Content();
-            //contentRepo.GetById(1).Returns(expectedContent);
+            var expectedContent = new Content();
+            contentRepo.GetById(1).Returns(expectedContent);
 
-            //var result = sut.Delete(1);
+            var result = sut.Delete(1);
 
-            //Assert.Equal(expectedContent, result.Model);
+            Assert.Equal(expectedContent, result.Model);
         }
 
         [Fact]
         public void Delete_Post_Returns_ActionResult()
         {
-            //var result = sut.Delete(new Content());
+            var result = sut.Delete(new Content());
 
-            //Assert.IsAssignableFrom<ActionResult>(result);
+            Assert.IsAssignableFrom<ActionResult>(result);
         }
 
     }

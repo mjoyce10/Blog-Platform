@@ -1,0 +1,70 @@
+﻿@model blog_template_practice.Models.Content
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Style/StyleSheet.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Teko&family=Titillium+Web&display=swap" rel="stylesheet">
+    <title>Create Post</title>
+</head>
+<body>
+
+    <h2 class="create-heading">Create a Blog Post</h2>
+    <div class="row">
+        <form class="create-update-form" asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="labels-and-inputs">
+                <div class="labels labels-inputs-grid">
+                    <div>
+                        <label asp-for="CategoryId" class="control-label"></label>
+                    </div>
+                    <div>
+                        <label asp-for="Title" class="control-label"></label>
+                        <span asp-validation-for="Title" class="text-danger"></span>
+                    </div>
+                    <div>
+                        <label asp-for="Author" class="control-label"></label>
+                        <span asp-validation-for="Author" class="text-danger"></span>
+                    </div>
+                    <div>
+                        <label asp-for="Body" class="control-label"></label>
+                        <span asp-validation-for="Body" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="inputs labels-inputs-grid">
+                    <div>
+                        <select class="category-input input" asp-for="CategoryId">
+                            <option value="1">Event Discussion</option>
+                            <option value="2">What's in Your Bag?</option>
+                            <option value="3">Tips & Tricks</option>
+                        </select>
+                    </div>
+                    <div>
+                        <input asp-for="Title" class="title-input input" />
+                    </div>
+                    <div>
+                        <input asp-for="Author" class="author-input input" />
+                    </div>
+                    <div>
+                        <textarea asp-for="Body" class="body-input input"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+
+    <div class="return-link-div">
+        <a href="/Home/Index">Return to Home</a>
+    </div>
+</body>
+</html>

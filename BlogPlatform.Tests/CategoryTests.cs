@@ -12,23 +12,23 @@ namespace blog_template_practice.Tests
 
         public CategoryTests()
         {
-            sut = new Category();
+            sut = new Category(1, "Category name");
         }
 
         [Fact]
         public void CategoryContructor_Should_Set_Id()
         {
-            //int result = sut.Id;
+            int result = sut.Id;
 
-            //Assert.Equal(1, result);
+            Assert.Equal(1, result);
         }
 
         [Fact]
         public void CategoryConstructor_Should_Set_Name()
         {
-            //string result = sut.Name;
+            string result = sut.Name;
 
-            //Assert.Equal("Category name", result);
+            Assert.Equal("Category name", result);
         }
     }
 }

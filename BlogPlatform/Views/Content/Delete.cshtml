@@ -1,0 +1,46 @@
+﻿@model blog_template_practice.Models.Content
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Style/StyleSheet.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Teko&family=Titillium+Web&display=swap" rel="stylesheet">
+    <title>Delete a post</title>
+</head>
+<body>
+
+    <h2 class="create-heading">Delete a Blog Post</h2>
+    <div>
+            <p class="delete-details">
+                <strong>@Html.DisplayNameFor(model => model.Category)</strong>: @Html.DisplayFor(model => model.Category.Name)
+            </p>
+            <p class="delete-details">
+                <strong>@Html.DisplayNameFor(model => model.Title)</strong>: @Html.DisplayFor(model => model.Title)
+            </p>
+            <p class="delete-details">
+                <strong>@Html.DisplayNameFor(model => model.Author)</strong>: @Html.DisplayFor(model => model.Author)
+            </p>
+            <p class="delete-details">
+                @Html.DisplayFor(model => model.Body)
+            </p>
+            <p class="delete-details">
+                <strong>@Html.DisplayNameFor(model => model.PublishDate)</strong>: @Html.DisplayFor(model => model.PublishDate)
+            </p>
+
+        <form class="delete-form" asp-action="Delete">
+            <input type="hidden" asp-for="Id" />
+            <input type="submit" value="Delete" class="btn btn-danger" />
+        </form>
+    </div>
+    <div class="return-link-div">
+        <a href="/Home/Index">Return to Home</a>
+    </div>
+</body>
+</html>

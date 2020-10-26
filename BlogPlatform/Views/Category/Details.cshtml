@@ -1,20 +1,21 @@
-﻿@model IEnumerable<blog_template_practice.Models.Content>
+﻿@model blog_template_practice.Models.Category
 @{
     Layout = null;
 }
 
 <!DOCTYPE html>
+
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
     <meta charset="utf-8" />
     <link href="~/Style/StyleSheet.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Teko&family=Titillium+Web&display=swap" rel="stylesheet">
-    <title>Blog Posts</title>
+    <title>@Model.Name</title>
 </head>
 <body>
     <header>
-        <h1>All Blog Posts</h1>
+        <h1>@Model.Name</h1>
     </header>
     <nav>
         <div class="nav-link">
@@ -27,17 +28,19 @@
             <a href="/Content/Create">Create a Post</a>
         </div>
     </nav>
-
-    @foreach (var content in Model)
+    @foreach (var content in Model.Contents)
     {
         <a class="blog-post-link" href="/Content/Details/@content.Id">
             <div class="blog-post">
                 <p><span class="post-title">@content.Title</span> by @content.Author</p>
-                <p><strong>Category</strong>: @content.Category.Name</p>
                 <p><strong>Date Published</strong>: @content.PublishDate</p>
             </div>
         </a>
     }
+
+    <div class="add-post-in-category">
+        <p><a href="/Content/CreateByCategoryId/@Model.Id">Add a post in @Model.Name</a></p>
+    </div>
 
     <footer>
         <p>&copy; Maureen Joyce 2020</p>

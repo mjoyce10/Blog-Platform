@@ -1,0 +1,48 @@
+﻿@model blog_template_practice.Models.Content
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+    <link href="~/Style/StyleSheet.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Teko&family=Titillium+Web&display=swap" rel="stylesheet">
+    <title>@Model.Title</title>
+</head>
+<body>
+    <h1>The Disc Dialogue</h1>
+    <nav>
+        <div class="nav-link">
+            <a href=/Home/Index>Home</a>
+        </div>
+        <div class="nav-link">
+            <a href="/Category/Details/@Model.CategoryId">Other Posts in @Model.Category.Name</a>
+        </div>
+        <div class="nav-link">
+            <a href="/Content/Create">Create a Post</a>
+        </div>
+    </nav>
+    <div class="blog-post">
+        <div class="title-and-info">
+            <h2 class="details-title">@Model.Title</h2>
+            <p>by @Model.Author on @Model.PublishDate</p>
+        </div>
+        <div class="blog-details-body">
+            <p>@Model.Body</p>
+        </div>
+
+        <div class="update-delete-links">
+            <a href="/Content/Update/@Model.Id">Edit post</a>
+            <a href="/Content/Delete/@Model.Id">Delete post</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; Maureen Joyce 2020</p>
+    </footer>
+</body>
+</html>
