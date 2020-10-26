@@ -11,13 +11,13 @@
     <meta name="viewport" content="width=device-width" />
     <link href="~/Style/StyleSheet.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Teko&family=Titillium+Web&display=swap" rel="stylesheet">
-    <title>Create a Post</title>
+    <title>Create Post</title>
 </head>
 <body>
 
 <h2 class="create-heading">Create a Post</h2>
 <div class="row">
-        <form asp-action="Create">
+        <form class="create-update-form" asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="labels-and-inputs">
                 <div class="labels labels-inputs-grid">

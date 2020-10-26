@@ -131,18 +131,18 @@ footer {
     padding-left: 1rem;
 }
 
-form {
+.create-update-form {
     padding: 2rem;
     border-top: .5rem solid #2f3d1e;
     border-bottom: .5rem solid #2f3d1e;
 }
 
-    form input {
+    .create-update-form input {
         padding: .1rem;
         font-family: 'Titillium Web', sans-serif;
     }
 
-    form select {
+    .create-update-form select {
         padding: .1rem;
         font-family: 'Titillium Web', sans-serif;
     }
@@ -204,3 +204,14 @@ textarea {
         .return-link-div a:hover {
             border-bottom: .05rem solid;
         }   
+
+/*Delete View*/
+.delete-details {
+    padding-left: 2rem;
+}
+
+.delete-form {
+    border-bottom: .5rem solid #2f3d1e;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+}
