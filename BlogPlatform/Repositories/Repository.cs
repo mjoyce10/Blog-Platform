@@ -21,7 +21,7 @@ namespace blog_template_practice.Repositories
             db.SaveChanges();
         }
 
-        public IEnumerable<T> GetAll()
+        public virtual IEnumerable<T> GetAll()
         {
             return db.Set<T>();
         }

@@ -10,52 +10,37 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Delete</title>
+    <link href="~/Style/StyleSheet.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Teko&family=Titillium+Web&display=swap" rel="stylesheet">
+    <title>Delete a post</title>
 </head>
 <body>
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>Content</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Title)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Body)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Body)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Author)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Author)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.PublishDate)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.PublishDate)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Category)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Category.Name)
-        </dd class>
-    </dl>
-    
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
-    </form>
-</div>
+    <h2 class="create-heading">Delete a Blog Post</h2>
+    <div>
+            <p class="delete-details">
+                <strong>@Html.DisplayNameFor(model => model.Category)</strong>: @Html.DisplayFor(model => model.Category.Name)
+            </p>
+            <p class="delete-details">
+                <strong>@Html.DisplayNameFor(model => model.Title)</strong>: @Html.DisplayFor(model => model.Title)
+            </p>
+            <p class="delete-details">
+                <strong>@Html.DisplayNameFor(model => model.Author)</strong>: @Html.DisplayFor(model => model.Author)
+            </p>
+            <p class="delete-details">
+                @Html.DisplayFor(model => model.Body)
+            </p>
+            <p class="delete-details">
+                <strong>@Html.DisplayNameFor(model => model.PublishDate)</strong>: @Html.DisplayFor(model => model.PublishDate)
+            </p>
+
+        <form class="delete-form" asp-action="Delete">
+            <input type="hidden" asp-for="Id" />
+            <input type="submit" value="Delete" class="btn btn-danger" />
+        </form>
+    </div>
+    <div class="return-link-div">
+        <a href="/Home/Index">Return to Home</a>
+    </div>
 </body>
 </html>

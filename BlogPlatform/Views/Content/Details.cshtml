@@ -9,22 +9,40 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <meta charset="utf-8" />
-    <title>Content Details</title>
+    <link href="~/Style/StyleSheet.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Teko&family=Titillium+Web&display=swap" rel="stylesheet">
+    <title>@Model.Title</title>
 </head>
 <body>
-    <h1>@Model.Title</h1>
-    <p>@Model.Author</p>
-    <p>@Model.PublishDate</p>
-    <p>@Model.Body</p>
+    <h1>The Disc Dialogue</h1>
+    <nav>
+        <div class="nav-link">
+            <a href=/Home/Index>Home</a>
+        </div>
+        <div class="nav-link">
+            <a href="/Category/Details/@Model.CategoryId">Other Posts in @Model.Category.Name</a>
+        </div>
+        <div class="nav-link">
+            <a href="/Content/Create">Create a Post</a>
+        </div>
+    </nav>
+    <div class="blog-post">
+        <div class="title-and-info">
+            <h2 class="details-title">@Model.Title</h2>
+            <p>by @Model.Author on @Model.PublishDate</p>
+        </div>
+        <div class="blog-details-body">
+            <p>@Model.Body</p>
+        </div>
 
-    <p><a href="/Content/Update/@Model.Id">Edit post</a></p>
+        <div class="update-delete-links">
+            <a href="/Content/Update/@Model.Id">Edit post</a>
+            <a href="/Content/Delete/@Model.Id">Delete post</a>
+        </div>
+    </div>
 
-    <p><a href="/Content/Delete/@Model.Id">Delete post</a></p>
-
-    <p><a href="/Content/Create">Create a blog post</a></p>
-
-    <p><a href="/Category/Index">Return to Category Index</a></p>
-
-    <p><a href="/Category/Details/@Model.CategoryId">Return to Category Details</a></p>
+    <footer>
+        <p>&copy; Maureen Joyce 2020</p>
+    </footer>
 </body>
 </html>

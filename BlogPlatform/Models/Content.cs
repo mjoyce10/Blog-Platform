@@ -14,6 +14,7 @@ namespace blog_template_practice.Models
         public string Body { get; set; }
         [Required]
         public string Author { get; set; }
+        [Display(Name = "Date")]
         public string PublishDate { get; set; }
         [Display(Name = "Category")]
         public int CategoryId { get; set; }
