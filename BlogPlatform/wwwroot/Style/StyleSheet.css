@@ -32,6 +32,10 @@ nav {
     padding: 1rem 0;
 }
 
+    .nav-link {
+        width: 20rem;
+        text-align: center;
+    }
     nav a {
         text-decoration: none;
         color: #879b87;
@@ -91,16 +95,20 @@ nav {
         flex-direction: column;
         align-items: center;
         text-decoration: none;
-        background-color: #a3c9d1;
+        background-color: #b1bdb1;
         padding: 2rem;
-        border: solid .5rem #a5ae35;
+        border: .5rem solid #2f3d1e;
         border-radius: .5rem;
     }
 
         .category-link a:hover {
-            background-color: #a5ae35;
-            border: solid .5rem #a3c9d1;
+            border: .5rem solid #b1bdb1;
+            background-color: #2f3d1e;
         }
+
+            .category-link a:hover p{
+                color: #b1bdb1;
+            }
 
     .category-link img {
         height: auto;
@@ -125,6 +133,93 @@ footer {
         font-size: 1.333rem;
         color: #879b87;
     }
+
+/*Content Index*/
+.blog-post {
+    width: 75%;
+    margin: 4rem auto;
+    border: .5rem solid #2f3d1e;
+    padding: 2rem;
+    border-radius: .5rem;
+    background-color: #b1bdb1;
+    color: #2f3d1e;
+}
+
+.blog-post-link {
+    text-decoration: none;
+}
+
+    .blog-post-link:hover div{
+        border: .5rem solid #b1bdb1;
+        background-color: #2f3d1e;
+        color: #b1bdb1;
+    }
+
+.post-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-right: .5rem;
+}
+/*Category Details View*/
+.add-post-in-category {
+    text-align: center;
+}
+
+    .add-post-in-category a {
+        text-decoration: none;
+        border: .5rem solid transparent;
+        color: #2f3d1e;
+    }
+
+        .add-post-in-category a:hover {
+            border-bottom: .15rem solid #2f3d1e;
+        }
+
+        .add-post-in-category p {
+            font-size: 1.777rem;
+            margin-bottom: 3rem;
+        }
+/*Content Details View*/
+.details-title {
+    background-color: #b1bdb1;
+    color: #2f3d1e;
+    margin-bottom: 0;
+    line-height: 1;
+}
+
+.title-and-info {
+    text-align: center;
+}
+
+    .title-and-info p {
+        margin: 0;
+        margin-bottom: 2rem;
+        font-weight: 600;
+        color: #2f3d1e;
+    }
+
+.blog-details-body {
+    width: 75%;
+    margin: auto;
+}
+
+.update-delete-links {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+    .update-delete-links a {
+        text-decoration: none;
+        color: #2f3d1e;
+        font-size: 1.333rem;
+        border-bottom: .05rem solid transparent;
+        margin: 1rem;
+    }
+
+        .update-delete-links a:hover {
+            border-bottom: .05rem solid #2f3d1e;
+        }
 
 /*Create Page*/
 .create-heading {
