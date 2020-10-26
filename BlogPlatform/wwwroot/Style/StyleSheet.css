@@ -15,7 +15,7 @@ h1 {
     font-size: 5.61rem;
     margin: 0;
     text-align: center;
-    padding-top: 1rem;
+    padding-top: 2rem;
     line-height: 1;
 }
 
@@ -30,6 +30,9 @@ nav {
     justify-content: space-evenly;
     font-size: 1.77rem;
     padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
     .nav-link {
@@ -46,45 +49,62 @@ nav {
             border-bottom: .15rem solid;
         }
 
+footer {
+    text-align: center;
+    background-color: #2f3d1e;
+}
+
+    footer p {
+        margin: 0;
+        padding: 2rem 0;
+        font-size: 1.333rem;
+        color: #879b87;
+    }
+
 /*HomePage*/
+
 .banner-div {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 6rem;
-    margin-bottom: 3rem;
+    align-items: center;
+    margin: 3rem 0;
 }
 
     .banner-div img {
         height: auto;
+        width: 60%;
         border: .5rem solid #2f3d1e;
         border-radius: .5rem;
     }
 
-    .banner-div p {
-        color: #2f3d1e;
-        background-color: #afcfd8;
+    .banner-div div {
+        margin-top: 2rem;
         padding: 1rem;
+        color: #2f3d1e;
+        background-color: #b1bdb1;
         border: .5rem solid #2f3d1e;
         border-radius: .5rem;
-        margin-left: 3rem;
         font-size: 1.777rem;
+        width: 75%;
+        text-align: center;
     }
 
+        .banner-div div p {
+            margin: 0;
+        }
+
+/*Category Index*/
 .categories {
     padding: 3rem;
 }
 
-    .categories h2 {
-        padding: .5rem 0;
-        text-align: center;
-    }
 
 .category-links {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    margin: 5rem 0;
+    margin: 3rem 0;
 }
 
 .category-link {
@@ -122,17 +142,6 @@ nav {
         color: #2f3d1e;
     }
 
-footer {
-    text-align: center;
-    background-color: #2f3d1e;
-}
-
-    footer p {
-        margin: 0;
-        padding: 2rem 0;
-        font-size: 1.333rem;
-        color: #879b87;
-    }
 
 /*Content Index*/
 .blog-post {
@@ -232,10 +241,10 @@ footer {
     border-bottom: .5rem solid #2f3d1e;
 }
 
-    .create-update-form input {
-        padding: .1rem;
-        font-family: 'Titillium Web', sans-serif;
-    }
+.input {
+    padding: .1rem;
+    font-family: 'Titillium Web', sans-serif;
+ }
 
     .create-update-form select {
         padding: .1rem;
@@ -262,6 +271,15 @@ textarea {
             margin: 1rem 0;
         }
 
+.labels-inputs-grid-no-category {
+    display: grid;
+    grid-template-rows: 3rem 3rem 1fr;
+}
+
+.labels-inputs-grid-no-category div {
+    margin: 1rem 0;
+}
+
 .labels {
     text-align: right;
     padding-right: 1.5rem;
@@ -279,7 +297,7 @@ textarea {
 .btn {
     background-color: #2f3d1e;
     color: #879b87;
-    padding: .5rem 1rem;
+    padding: .5rem 1rem; 
     font-size: 1rem;
     font-weight: 600;
 }

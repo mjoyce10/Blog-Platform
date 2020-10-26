@@ -14,10 +14,10 @@
     <title>@Model.Title</title>
 </head>
 <body>
-    <h1>Disc Golf Blog</h1>
+    <h1>The Disc Dialogue</h1>
     <nav>
         <div class="nav-link">
-            <a href="">Home</a>
+            <a href=/Home/Index>Home</a>
         </div>
         <div class="nav-link">
             <a href="/Category/Details/@Model.CategoryId">Other Posts in @Model.Category.Name</a>
@@ -40,5 +40,9 @@
             <a href="/Content/Delete/@Model.Id">Delete post</a>
         </div>
     </div>
+
+    <footer>
+        <p>&copy; Maureen Joyce 2020</p>
+    </footer>
 </body>
 </html>

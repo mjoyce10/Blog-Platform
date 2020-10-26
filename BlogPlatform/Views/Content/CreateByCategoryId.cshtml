@@ -15,15 +15,12 @@
 </head>
 <body>
 
-<h2 class="create-heading">Create a Post</h2>
-<div class="row">
+    <h2 class="create-heading">Create a Post</h2>
+    <div class="row">
         <form class="create-update-form" asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="labels-and-inputs">
-                <div class="labels labels-inputs-grid">
-                    <div>
-                        @*<label asp-for="CategoryId" class="control-label"></label>*@
-                    </div>
+                <div class="labels labels-inputs-grid-no-category">
                     <div>
                         <label asp-for="Title" class="control-label"></label>
                         <span asp-validation-for="Title" class="text-danger"></span>
@@ -37,20 +34,20 @@
                         <span asp-validation-for="Body" class="text-danger"></span>
                     </div>
                 </div>
-                <div class="inputs labels-inputs-grid">
+                <div class="inputs labels-inputs-grid-no-category">
                     <div>
-                        <input asp-for="CategoryId" class="form-control" type="hidden" value="@ViewBag.CategoryId" />
+                        <input asp-for="Title" class="title-input input" />
                     </div>
                     <div>
-                        <input asp-for="Title" class="title-input" />
+                        <input asp-for="Author" class="author-input input" />
                     </div>
                     <div>
-                        <input asp-for="Author" class="author-input" />
-                    </div>
-                    <div>
-                        <textarea asp-for="Body" class="body-input"></textarea>
+                        <textarea asp-for="Body" class="body-input input"></textarea>
                     </div>
                 </div>
+            </div>
+            <div>
+                <input asp-for="CategoryId" class="form-control input" type="hidden" value="@ViewBag.CategoryId" />
             </div>
             <div class="button">
                 <input type="submit" value="Create" class="btn btn-primary" />
@@ -59,9 +56,7 @@
     </div>
 
     <div class="return-link-div">
-        <a href="/Category/Index">Return to Home</a>
+        <a href="/Home/Index">Return to Home</a>
     </div>
 </body>
 </html>
-
-<input asp-for="CategoryId" class="form-control" type="hidden" value="@ViewBag.CategoryId" />

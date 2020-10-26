@@ -16,8 +16,8 @@
 </head>
 <body>
 
-<h2 class="create-heading">Create a Blog Post</h2>
-<div class="row">
+    <h2 class="create-heading">Create a Blog Post</h2>
+    <div class="row">
         <form class="create-update-form" asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="labels-and-inputs">
@@ -29,7 +29,7 @@
                         <label asp-for="Title" class="control-label"></label>
                         <span asp-validation-for="Title" class="text-danger"></span>
                     </div>
-                    <div> 
+                    <div>
                         <label asp-for="Author" class="control-label"></label>
                         <span asp-validation-for="Author" class="text-danger"></span>
                     </div>
@@ -40,20 +40,20 @@
                 </div>
                 <div class="inputs labels-inputs-grid">
                     <div>
-                        <select class="category-input" asp-for="CategoryId">
+                        <select class="category-input input" asp-for="CategoryId">
                             <option value="1">Event Discussion</option>
                             <option value="2">What's in Your Bag?</option>
                             <option value="3">Tips & Tricks</option>
                         </select>
                     </div>
                     <div>
-                        <input asp-for="Title" class="title-input" />
+                        <input asp-for="Title" class="title-input input" />
                     </div>
                     <div>
-                        <input asp-for="Author" class="author-input" />
+                        <input asp-for="Author" class="author-input input" />
                     </div>
                     <div>
-                        <textarea asp-for="Body" class="body-input"></textarea>
+                        <textarea asp-for="Body" class="body-input input"></textarea>
                     </div>
                 </div>
             </div>
@@ -61,11 +61,10 @@
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
-</div>
+    </div>
 
-<div class="return-link-div">
-    <a href="/Category/Index">Return to Home</a>
-</div>
-
+    <div class="return-link-div">
+        <a href="/Home/Index">Return to Home</a>
+    </div>
 </body>
 </html>

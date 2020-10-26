@@ -13,12 +13,12 @@
     <title>Category Index</title>
 </head>
 <body>
-    <header class="home-header">
-        <h1>Disc Golf Blog</h1>
+    <header>
+        <h1>Category Index</h1>
     </header>
     <nav>
         <div class="nav-link">
-            <a href="#categories">Categories</a>
+            <a href=/Home/Index>Home</a>
         </div>
         <div class="nav-link">
             <a href="/Content/Create">Create a Post</a>
@@ -27,12 +27,7 @@
             <a href="/Content/Index">All Posts</a>
         </div>
     </nav>
-    <div class="banner-div">
-        <img src="/Images/DGBanner2.jpg" alt="Disc Golf Basket" />
-        <p>Welcome to my blog. Disc Golf is my favorite sport. </p>
-    </div>
     <div id="categories" class="categories">
-        <h2>Category Index</h2>
         <div class="category-links">
             @foreach (var category in Model)
             {
